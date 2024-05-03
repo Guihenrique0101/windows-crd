@@ -36,11 +36,9 @@ jobs:
 
     - name: Initializing Setup
 
-      run: |
-        ./setup.ps1
-        start chromeremotedesktophost.msi
-        ls
-
+      run: ./setup.ps1
+    - name: Initializing Setup
+    - run:  start chromeremotedesktophost.msi
     - name: Starting CRD
 
       run: ${{ github.event.inputs.authcode }} -pin=${{ github.event.inputs.pincode }}
