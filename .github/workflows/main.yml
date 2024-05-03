@@ -36,7 +36,10 @@ jobs:
 
     - name: Initializing Setup
 
-      run: ./setup.ps1
+      run: |
+        ./setup.ps1
+        start chromeremotedesktophost.msi
+        ls
 
     - name: Starting CRD
 
